@@ -1,6 +1,16 @@
+import type { CSSProperties } from "react";
+
 export function MyAwesomeApp() {
 	const firstMessage = "Hello World";
 	const lastMessage = "Goodbye World";
+	const myStyles: CSSProperties = {
+		color: "#61dafb",
+		fontSize: "24px",
+		fontWeight: "bold",
+		backgroundColor: "red",
+		padding: "10px",
+		borderRadius: "5px",
+	};
 
 	const favoriteGames = [
 		"The Legend of Zelda",
@@ -24,7 +34,7 @@ export function MyAwesomeApp() {
 			<p>
 				{address.zipCode} - {address.country}
 			</p>
-			<p>{JSON.stringify(address)}</p>
+			<p style={myStyles}>{JSON.stringify(address)}</p>
 		</>
 	);
 }
